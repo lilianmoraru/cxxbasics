@@ -36,6 +36,22 @@ set(_cbok  "${_cbp}${__cxxbasics_success}")
 # `cbnok` stands for [C]XX[B]asics [N]ot [OK]
 set(_cbnok "${_cbp}${__cxxbasics_failure}")
 
+macro(cbmessage)
+  message(STATUS "${_cbp} " ${ARGV})
+endmacro(cbmessage)
+
+macro(cbok)
+  message(STATUS "${_cbok} " ${ARGV})
+endmacro(cbok)
+
+macro(cbnok)
+  message(STATUS "${_cbnok} " ${ARGV})
+endmacro(cbnok)
+
+macro(cberror)
+  message(FATAL_ERROR "${_cbnok} " ${ARGV})
+endmacro(cberror)
+
 #========================================================
 
 unset(__cxxbasics_prefix)
