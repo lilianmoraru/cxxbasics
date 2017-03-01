@@ -50,8 +50,8 @@ macro(opt_overwrite  var_name  var_value)
   # correct variable in the cache. We rely on _DESCRIPTION and _TYPE to find if the variable was
   # previously registered with `opt`
   if(NOT DEFINED ${var_name}_DESCRIPTION OR NOT DEFINED ${var_name}_TYPE)
-    message(FATAL_ERROR "${_cbnok} user code logic error: `${var_name}` was not registered with an `opt` macro beforehand")
+    cberror("user-code logic error: `${var_name}` was not registered with an `opt` macro beforehand")
   endif()
 
-  set(${var_name}  ${var_value} CACHE ${var_name}_TYPE  "${var_name}_DESCRIPTION"  FORCE)
+  set(${var_name}  ${var_value} CACHE ${${var_name}_TYPE}  "${${var_name}_DESCRIPTION}"  FORCE)
 endmacro()
