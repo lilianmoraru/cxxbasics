@@ -5,6 +5,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}")
 # Variables necessary in every module
 include(InitCXXBasics)
 
+# Set reasonable CMake defaults
+include(DefaultSettings)
+
 # Activate faster linkers by default
 include(accelerators/UseFasterLinkers)
 
