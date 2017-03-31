@@ -7,3 +7,6 @@ include(InitCXXBasics)
 
 # Activate faster linkers by default
 include(accelerators/UseFasterLinkers)
+
+# Activate the compiler cache tool
+include(accelerators/UseCompilerCacheTool)
