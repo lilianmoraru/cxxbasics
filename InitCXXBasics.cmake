@@ -2,6 +2,10 @@
 
 cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 
+# Enable C and CXX by default. This allows to run some commands in script mode, or using "-C"
+enable_language(C)
+enable_language(CXX)
+
 # Project custom messaging macros
 include(helpers/MacroCustomMessages)
 
