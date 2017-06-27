@@ -3,7 +3,7 @@
 # The linker is handled separately per compiler, so, you can do something like this:
 # -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=clang++
 
-cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
 
 opt_ifndef("Use faster linkers(LLD, GNU gold...) if supported"  BOOL  ON  CXXBASICS_USE_FASTER_LINKERS)
 if(CXXBASICS_USE_FASTER_LINKERS)
