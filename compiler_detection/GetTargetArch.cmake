@@ -139,13 +139,13 @@ if("${CXXBASICS_C_COMPILER_TARGET_ARCH}" STREQUAL ""
 
       # Lets see if it is not unknown, otherwise we know we have the correct architecture in TARGET_ARCH
       if("${TARGET_ARCH}" STREQUAL "unknown")
-        opt_overwrite(${variable} "unkown")
+        opt_overwrite(${variable} "unknown")
       else()
         opt_overwrite(${variable} "${TARGET_ARCH}")
       endif()
     else()
       # If for some reason we didn't get the expected string, set the arch to "unknown"
-      opt_overwrite(${variable} "unkown")
+      opt_overwrite(${variable} "unknown")
     endif()
 
     # Catching coding errors
