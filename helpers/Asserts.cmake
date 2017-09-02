@@ -1,6 +1,6 @@
 ## This module contains different helper asserts
 
-cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 
 function(CXXBASICS_ASSERT_WRITABLE_FOLDER  folder_path)
   include(helpers/FnMktemp)
