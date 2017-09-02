@@ -5,6 +5,12 @@
 
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 
+
+cmake_policy(PUSH)
+if(POLICY CMP0054)
+  cmake_policy(SET CMP0054 NEW)
+endif(POLICY CMP0054)
+
 opt_ifndef("Use faster linkers(LLD, GNU gold...) if supported"  BOOL  ON  CXXBASICS_USE_FASTER_LINKERS)
 if(CXXBASICS_USE_FASTER_LINKERS)
   macro(__cxxbasics_set_linker  compiler)
@@ -95,3 +101,5 @@ if(CXXBASICS_USE_FASTER_LINKERS)
   # Set the linker for the CXX compiler
   __cxxbasics_set_linker("${CMAKE_CXX_COMPILER}")
 endif()
+
+cmake_policy(POP)
